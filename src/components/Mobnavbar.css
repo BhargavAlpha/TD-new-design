@@ -1,0 +1,44 @@
+.mob-navbar-container{
+    width:100vw;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding:0 2% 2% 0;
+}
+.mob-navbar{
+    width: 100%;
+    background-color: white;
+    padding:2% 0 0 2%;
+    display: flex;
+    justify-content: space-between;
+}
+.mobnav-right{
+
+    width: 90%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 5%;
+}
+.mobnav-right-sub{
+    display: flex;
+    /* gap: 10px; */
+    align-items: center;
+    color: var(--Eminence-700, #992E9D);
+    font-family: Poppins;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%; /* 14.4px */
+    letter-spacing: -0.24px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 480px) {
+    .mob-navbar-container {
+        padding: 0 3% 3% 0%;
+    }
+    .mob-navbar {
+        padding: 3% 0 0 3%;
+    }
+    
+}

@@ -1,0 +1,137 @@
+.main-container {
+
+  display: flex;
+  
+}
+
+.main-left-container {
+  border-right: 1px solid var(--Eminence-900, #6a256a);
+  background: var(--Eminence-950, #450d45) !important;
+  width: 240px;
+  display: flex;
+  justify-content: flex-end;
+  /* align-items: center; */
+  height: 100vh;
+  margin: 0;
+  
+}
+
+.main-right-container {
+  /* margin-left: 250px; */
+  width: calc(100vw - 240px);
+  height: 100vh;
+  background-color: #f5f5f6;
+  overflow: hidden;
+
+}
+
+
+
+.main-chat {
+  display: none;
+  padding: 15px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 15px;
+  background: var(
+    --tutedude-color-primary-gradient,
+    radial-gradient(50% 75.48% at 50% 50%, #a355a3 0%, #912191 100%)
+  );
+}
+.main-chat span {
+  color: var(--tutedude-color-primary-10, #f4e9f4);
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: capitalize;
+}
+.main-chat path {
+  fill: white;
+}
+.chatM {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  z-index: 111;
+}
+.main-search {
+  height: 40px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.main-search input {
+  border-radius: 10px;
+  border: 1px solid var(--tutedude-color-primary-10, #f4e9f4);
+  outline: 1px solid var(--tutedude-color-primary-10, #f4e9f4);
+  display: flex;
+  width: 70vw;
+  color: #c890c8;
+  padding: 10px;
+  align-items: center;
+  gap: 10px;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: capitalize;
+}
+.main-input::placeholder {
+  color: var(--tutedude-color-primary-50, #c890c8);
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: capitalize;
+}
+/* .main-body-cont {
+  height: calc(100vh - 87px);
+  z-index: -1;
+  overflow-y: scroll;
+  display: flex;
+  padding-bottom: 10px;
+  gap: 10px;
+  flex-direction: column;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  box-sizing: border-box;
+} */
+
+
+
+@media screen and (max-width: 1000px) {
+  .main-left-container {
+    display: none;
+  }
+  .main-right-container {
+    width: 100vw;
+
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+  }
+  .main-body-cont {
+    width: 100vw;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .main-search {
+    display: flex;
+    padding-bottom: 10px;
+  }
+  .main-body-cont {
+    height: calc(100vh - 133px);
+  }
+  .main-chat {
+    display: inline-flex;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+  }
+}

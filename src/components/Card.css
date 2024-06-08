@@ -1,0 +1,224 @@
+.card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    border-radius: 16px;
+    width: 283px;
+    height: 380px;
+    background-color: white;
+    border: 1px solid var(--Woodsmoke-700, #E5E5E8);
+    cursor: pointer;
+}
+
+.card-img {
+    width: 283px;
+    height: 104px;
+    object-fit: cover;
+    border-radius: 16px 16px 0 0;
+}
+
+.card-content1,
+.card-content2,
+.card-content3-outer {
+    padding: 8px 14px;
+    width: 100%;
+}
+
+.card-content1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.card-content1 h1 {
+    overflow: hidden;
+    color: var(--Eminence-950, #450d45);
+    text-overflow: ellipsis;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.card-icon-text1,
+.card-icon-text2,
+.card-icon-text3 {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.card-icon-text1 {
+    gap: 3px;
+}
+
+.card-icon-text1 span {
+    overflow: hidden;
+    color: var(--Woodsmoke-400, #83848d);
+    text-overflow: ellipsis;
+    font-family: Poppins;
+    font-size: 12px;
+}
+
+.card-icon-text2 {
+    justify-content: space-between;
+    gap: 1px;
+}
+
+.card-prog-bar {
+    height: 8px;
+    width: 100%;
+    border-radius: 50px;
+    background-color: #F5F5F6;
+}
+
+.card-percent {
+    color: var(--tutedude-color-supporting-success-100, #6bb870);
+    text-align: right;
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.card-icon-text3 {
+    gap: 3px;
+}
+
+.card-icon-text3 span {
+    color: #6bb870;
+    font-family: Poppins;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: -0.24px;
+}
+
+.card-cour-prog-text {
+    color: var(--Woodsmoke-500, #686972);
+    font-family: Poppins;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.24px;
+}
+
+.card-content2 {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background-color: var(--Woodsmoke-50, #F5F5F6);
+}
+
+.card-content2 span {
+    color: var(--Woodsmoke-700, #4C4D52);
+    font-family: Poppins;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: -0.24px;
+}
+
+.card-content3-outer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 10px 14px;
+    background-color: white;
+    border-radius: 0 0 16px 16px;
+    border: 1px solid var(--Woodsmoke-700, #E5E5E8);
+}
+
+.card-content3-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.card-resume-btn,
+.card-cert-btn {
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    box-sizing: border-box;
+}
+
+.card-resume-btn {
+    background: var(--Linear-Eminence, linear-gradient(180deg, #B73BBE 0%, #992E9D 93.51%));
+    color: var(--Eminence-50, #fcf5fe);
+}
+
+.card-resume-btn-full {
+    width: 100%;
+}
+
+.card-cert-btn {
+    border: 1px solid var(--Eminence-100, #F9EBFC);
+    background: var(--Eminence-100, #F9EBFC);
+    color: var(--Eminence-800, #7F2781);
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 500;
+    width: 49%;
+    text-transform: capitalize;
+}
+
+.load-card-img {
+    border-radius: 10px 10px 0 0;
+    width: 263px;
+    height: 380px; /* Fixed height */
+    border-radius: 16px;
+}
+
+/* Responsive styles */
+@media (max-width: 480px) {
+    .card-container {
+        width: 240px;
+        height: 300px;
+    }
+
+    .card-img {
+        width: 200px;
+        height: 70px;
+    }
+
+    .card-content1 h1 {
+        font-size: 14px;
+    }
+
+    .card-icon-text1 span,
+    .card-icon-text2 span,
+    .card-icon-text3 span {
+        font-size: 10px;
+    }
+
+    .card-percent {
+        font-size: 12px;
+    }
+
+    .card-cour-prog-text {
+        font-size: 10px;
+    }
+
+    .card-content2 span {
+        font-size: 10px;
+    }
+    .card-resume-btn,.card-cert-btn {
+        padding: 10px 8px;
+        font-size: 12px;
+        width:80px;
+    }
+    .card-resume-btn span{
+        font-size: 10px;
+    }
+    .card-cert-btn span{
+        font-size: 10px;
+    }
+    .card-resume-btn-full {
+        width: 100%;
+    }
+
+}

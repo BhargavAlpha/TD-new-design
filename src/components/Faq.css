@@ -1,0 +1,32 @@
+.faq-cont {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ebedef;
+  }
+  .faq-fd {
+      cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    color: var(--tutedude-color-neutral-20100, #374957);
+    font-family: Poppins;
+    font-size: 16px;
+    font-size: clamp(12px, 1vw, 16px);
+    font-style: normal;
+    align-items: center;
+    font-weight: 500;
+    line-height: normal;
+  }
+  .faq-sd {
+      cursor: pointer;
+    color: var(--tutedude-color-neutral-2075, #697781);
+    font-family: Poppins;
+    font-size: 16px;
+    font-size: clamp(12px, 1vw, 15px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  
