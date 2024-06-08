@@ -67,6 +67,7 @@
 }
 
 .card-prog-bar {
+    border : 0.1px solid rgba(100, 100, 100, 0.143);
     height: 8px;
     width: 100%;
     border-radius: 50px;

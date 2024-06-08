@@ -12,6 +12,7 @@ const Card = ({ slug, email, date, certId }) => {
   const month = (inputDate.getUTCMonth() + 1).toString().padStart(2, "0");
   const year = inputDate.getUTCFullYear();
   const outputDateString = `${day}-${month}-${year}`;
+
   // console.log("certId",certId);
   const certificate = certId ? true : false;
 
@@ -183,8 +184,10 @@ const Card = ({ slug, email, date, certId }) => {
           </div>
         </div>
         <div>
-          {comp / total != 1 ? (
-            <div className="card-cour-prog-text">Course Progress</div>
+          {comp !== total ? (
+            <div className="card-cour-prog-text">
+              {comp === 0 ? "Yet To Start" : "Course in Progress"}
+            </div>
           ) : (
             <div className="card-icon-text3">
               <span>Course Completed</span>
@@ -215,32 +218,34 @@ const Card = ({ slug, email, date, certId }) => {
           )}
         </div>
       </div>
-      <div className="card-content2">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="14"
-          height="15"
-          viewBox="0 0 14 15"
-          fill="none"
-        >
-          <path
-            d="M12.8333 8.66683V7.50016C12.8333 7.01073 12.8333 6.57573 12.8258 6.18766H1.17418C1.16666 6.57573 1.16666 7.01073 1.16666 7.50016V8.66683C1.16666 10.8667 1.16666 11.9667 1.85007 12.6501C2.53349 13.3335 3.63344 13.3335 5.83332 13.3335H8.16666C10.3665 13.3335 11.4665 13.3335 12.1499 12.6501C12.8333 11.9667 12.8333 10.8667 12.8333 8.66683Z"
-            fill="#4C4D52"
-          />
-          <path
-            d="M4.52082 1.9585C4.52082 1.71687 4.32495 1.521 4.08332 1.521C3.8417 1.521 3.64582 1.71687 3.64582 1.9585V2.87973C2.80621 2.94696 2.25502 3.11196 1.85007 3.51691C1.44512 3.92186 1.28012 4.47305 1.21289 5.31266H12.7871C12.7199 4.47305 12.5549 3.92186 12.1499 3.51691C11.745 3.11196 11.1938 2.94696 10.3542 2.87973V1.9585C10.3542 1.71687 10.1583 1.521 9.91666 1.521C9.67503 1.521 9.47916 1.71687 9.47916 1.9585V2.84102C9.09108 2.8335 8.65609 2.8335 8.16666 2.8335H5.83332C5.34389 2.8335 4.90889 2.8335 4.52082 2.84102V1.9585Z"
-            fill="#4C4D52"
-          />
-        </svg>
-        <span>Enrolled On {outputDateString}</span>
-      </div>
+      {date && (
+        <div className="card-content2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="14"
+            height="15"
+            viewBox="0 0 14 15"
+            fill="none"
+          >
+            <path
+              d="M12.8333 8.66683V7.50016C12.8333 7.01073 12.8333 6.57573 12.8258 6.18766H1.17418C1.16666 6.57573 1.16666 7.01073 1.16666 7.50016V8.66683C1.16666 10.8667 1.16666 11.9667 1.85007 12.6501C2.53349 13.3335 3.63344 13.3335 5.83332 13.3335H8.16666C10.3665 13.3335 11.4665 13.3335 12.1499 12.6501C12.8333 11.9667 12.8333 10.8667 12.8333 8.66683Z"
+              fill="#4C4D52"
+            />
+            <path
+              d="M4.52082 1.9585C4.52082 1.71687 4.32495 1.521 4.08332 1.521C3.8417 1.521 3.64582 1.71687 3.64582 1.9585V2.87973C2.80621 2.94696 2.25502 3.11196 1.85007 3.51691C1.44512 3.92186 1.28012 4.47305 1.21289 5.31266H12.7871C12.7199 4.47305 12.5549 3.92186 12.1499 3.51691C11.745 3.11196 11.1938 2.94696 10.3542 2.87973V1.9585C10.3542 1.71687 10.1583 1.521 9.91666 1.521C9.67503 1.521 9.47916 1.71687 9.47916 1.9585V2.84102C9.09108 2.8335 8.65609 2.8335 8.16666 2.8335H5.83332C5.34389 2.8335 4.90889 2.8335 4.52082 2.84102V1.9585Z"
+              fill="#4C4D52"
+            />
+          </svg>
+          && <span>Enrolled On {outputDateString}</span>
+        </div>
+      )}
       <div className="card-content3-outer">
         {certificate ? (
           <div className="card-content3-inner">
             <button
               className="card-resume-btn"
               onClick={() =>
-                window.location.href = `https://upskill.tutedude.com/course/lecture-${slug}`
+                (window.location.href = `https://upskill.tutedude.com/course/lecture-${slug}`)
               }
             >
               <span>Resume</span>
@@ -262,7 +267,6 @@ const Card = ({ slug, email, date, certId }) => {
             <button
               className="card-cert-btn"
               onClick={() => {
-                
                 window.open(
                   `https://upskill.tutedude.com/certificate/${certId}`
                 );
