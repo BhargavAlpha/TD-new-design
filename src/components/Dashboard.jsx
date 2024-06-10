@@ -28,7 +28,9 @@ function Dashboard({ enrolledCourses, email, courses, certificates, certIds }) {
             <div className="dash-incr-refund">
               Increase Refund Validity by 1 Year*
             </div>
-            <button className="dash-explore-btn">Explore Now</button>
+            <button className="dash-explore-btn"
+            onClick={()=>window.location.href = 'https://tutedude.com/category/upgrade'}
+            >Explore Now</button>
           </div>
         </div>
         <div className="dash-header-right">

@@ -36,7 +36,7 @@ const LeftBar = ({ setOpened, setPage, page, name, data }) => {
               <div className="left-mob-name">{name[0].toUpperCase()+name.slice(1)}</div>
             </div>
             <div className="left-mob-btn-cont">
-              <button className="left-mob-res-btn">
+              {/* <button className="left-mob-res-btn">
                 <span>Upload Resume</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -57,7 +57,7 @@ const LeftBar = ({ setOpened, setPage, page, name, data }) => {
                     stroke-width="1.5"
                   />
                 </svg>
-              </button>
+              </button> */}
               <button className="left-mob-pack-btn">
                 <span>Pro Pack Bundle</span>
                 <svg
@@ -213,7 +213,7 @@ const LeftBar = ({ setOpened, setPage, page, name, data }) => {
 
             <span>Certificate</span>
           </div>
-          <div
+          {/* <div
             className={`left-nav-card ${page === "hackathon" ? "active" : ""}`}
             onClick={() => setPage("hackathon")}
           >
@@ -233,7 +233,7 @@ const LeftBar = ({ setOpened, setPage, page, name, data }) => {
             </svg>
 
             <span>Hackathon</span>
-          </div>
+          </div> */}
 
           <div
             className={`left-nav-card ${page === "resume" ? "active" : ""}`}

@@ -15,8 +15,11 @@ function Navbar({ name }) {
     <div className="navbar-container">
       <div className="navbar">
         <div className="nav-left">
-          <div className="nav-text">
-            <span>Upgrade Course</span>
+          <div className="nav-text"
+           onClick={()=>window.location.href = 'https://tutedude.com/category/upgrade'}
+           >
+            <span
+            >Upgrade Course</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="18"
@@ -82,7 +85,7 @@ function Navbar({ name }) {
           </div>
         </div>
         <div className="nav-right">
-          <button className="nav-upload-btn">
+          {/* <button className="nav-upload-btn">
             <span>Upload Resume</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -103,7 +106,7 @@ function Navbar({ name }) {
                 strokeWidth="1.5"
               />
             </svg>
-          </button>
+          </button> */}
           <div className="nav-user-menu">
             <div className="name-prefix">{name[0].toUpperCase()}</div>
             <span>{name[0].toUpperCase() + name.slice(1)}</span>

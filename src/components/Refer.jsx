@@ -96,7 +96,7 @@ function Refer({data}) {
                 </defs>
               </svg>
               <p>
-                Your Friends's Reward:&nbsp;<span>{}</span>
+                Your Friends Reward:&nbsp;<span>{"₹200 off"}</span>
               </p>
             </div>
             <div className="ref-reward">

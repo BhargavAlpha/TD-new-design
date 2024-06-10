@@ -1,8 +1,9 @@
 import React from "react";
 import LeftBar from "./Leftbar";
 import "./Mobnavbar.css";
-
+import { useNavigate } from "react-router-dom";
 function Mobnavbar({ name, setPage, page, data }) {
+    const navigate = useNavigate();
   const [leftBarVisible, setLeftBarVisible] = React.useState(false);
   console.log("name in Mobnavbar:", name);
 
@@ -39,7 +40,9 @@ function Mobnavbar({ name, setPage, page, data }) {
           </defs>
         </svg>
         <div className="mobnav-right">
-          <div className="mobnav-right-sub">
+          <div className="mobnav-right-sub"
+            onClick={()=>window.location.href='https://tutedude.com/category/upgrade'}
+          >
             <span>Upgarde Courses</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -71,7 +74,7 @@ function Mobnavbar({ name, setPage, page, data }) {
             </svg>
           </div>
           <div className="mobnav-right-sub">
-            <span>Refer and Earn</span>
+            <span onClick={()=>navigate('?page=refer')}>Refer and Earn</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="18"

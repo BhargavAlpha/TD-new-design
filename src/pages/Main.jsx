@@ -11,6 +11,7 @@ import Certificate from '../components/Certificate';
 import Login from '../components/Login';
 import loader from '../assets/loader.gif';
 
+
 function Main() {
   // const url = process.env.REACT_APP_BACK_URL;
 
@@ -95,6 +96,12 @@ useEffect(() => {
   useEffect(() => {
     if (pagee === "refer") {
       setPage("refer");
+    }
+    if(pagee === "certificate"){
+      setPage("certificate");
+    }
+    if(pagee==="dashboard"){
+      setPage("dashboard");
     }
     
     fetch(`https://api.tutedude.com/lms/hackathon/certificate?email=${email}`)

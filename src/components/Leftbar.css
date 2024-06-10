@@ -6,6 +6,7 @@
   display: flex;
   gap: 10px;
   align-items: center;
+  overflow: hidden;
   
   flex-direction: column;
   position: fixed;
@@ -16,8 +17,9 @@
   display: flex;
   justify-content:center;
   align-items: center;
-  width: 100%;
+  width: 230px;
   position: relative;
+
 }
 
 .left-logo-cont img:first-child {
@@ -228,7 +230,7 @@ letter-spacing: -0.36px;
   border-radius: 8px;
   border: 1px solid var(--Eminence-100, #f9ebfc);
   background: var(--Eminence-50, #fcf5fe);
-  width: 45%;
+  width: 90%;
 }
 .left-mob-res-btn span,.left-mob-pack-btn span{
   color: var(--Eminence-700, #992E9D);
@@ -314,8 +316,8 @@ text-transform: capitalize;
   
 }
 @media screen and (max-height: 670px) {
-  .leftbar-container{
+  /* .leftbar-container{
     overflow-y: scroll;
     height: 100%;
-  }
+  } */
 }

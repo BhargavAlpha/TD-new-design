@@ -182,7 +182,7 @@
         display: grid;
         grid-template-rows: auto auto;
         scroll-snap-align: start; 
-        min-width: calc(100vw - (6/100)*100vw);
+        min-width: calc(100vw - (7/100)*100vw);
       }
       .dash-header::-webkit-scrollbar {
         height: 6px;
