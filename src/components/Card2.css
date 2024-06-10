@@ -106,7 +106,12 @@
     .card2-top span{
         font-size: 14px;
     }
-
+    .card2-bottom span{
+        font-size: 14px;
+    }
+    .card2-bottom{
+        padding: 15px 13px;
+    }
     
     .card2-lec-dur-cont, .card2-access-ment-cont {
         flex-direction: column;
