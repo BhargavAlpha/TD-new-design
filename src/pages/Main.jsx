@@ -15,7 +15,6 @@ function Main() {
   // const url = process.env.REACT_APP_BACK_URL;
 
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const [showLeftBar, setShowLeftBar] = useState(false);
   const [showLogin, setShowLogin] = useState(false);
   const [name, setName] = useState("Profile Name");
   const [data, setData] = useState();
@@ -139,6 +138,7 @@ useEffect(() => {
           setPage={setPage}
           page={page}
           data={data}
+          name={name}
          />
       </div>
       <div className='main-right-container'>

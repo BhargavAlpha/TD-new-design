@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Navbar.css";
-import LeftBar from "./Leftbar";
+import Cookies from "js-cookie";
 
 function Navbar({ name }) {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -105,8 +105,9 @@ function Navbar({ name }) {
             </svg>
           </button>
           <div className="nav-user-menu">
-            <div className="name-prefix">{name[0]}</div>
-            <span>{name}</span>
+            <div className="name-prefix">{name[0].toUpperCase()}</div>
+            <span>{name[0].toUpperCase() + name.slice(1)}</span>
+
             <svg 
             onClick={toggleDropdown}
              xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewBox="0 0 18 19" fill="none">
@@ -114,9 +115,10 @@ function Navbar({ name }) {
 </svg>
             {dropdownOpen && (
               <div className="nav-dropdown-menu">
-                <a href="/profile">Profile</a>
-                <a href="/settings">Settings</a>
-                <a href="/logout">Logout</a>
+                <a onClick={() => {
+                            Cookies.remove('user_email');
+                        window.location.href = 'https://tutedude.com/byebye.php'
+                    }}>Logout</a>
               </div>
             )}
           </div>

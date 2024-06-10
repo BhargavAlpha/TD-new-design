@@ -233,7 +233,7 @@
 .ref-total-earn-cont {
   display: flex;
   gap: 5px;
-    align-items: center;
+  align-items: center;
 }
 .ref-tot-earn-icon-cont {
   border-radius: 100px;
@@ -326,7 +326,7 @@
   box-shadow: 0px 5px 24px 0px rgba(0, 0, 0, 0.05);
 }
 .refer-table {
-  width: 100%;
+  width: 800px;
   display: flex;
   flex-direction: column;
   border-radius: 20px 20px 0 0;
@@ -352,6 +352,21 @@
   padding: 14px 24px;
   gap: 24px;
 }
+.refer-table-cont::-webkit-scrollbar {
+  width: 20px;
+  display: flex;
+  height: 6px;
+}
+
+.refer-table-cont::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+.refer-table-cont::-webkit-scrollbar-thumb {
+  background: var(--Eminence-700, #992e9d);
+  border-radius: 10px;
+}
 .refer-table tr {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -371,6 +386,12 @@
 }
 
 @media screen and (max-width: 768px) {
+  .refer-table-cont {
+    overflow-x: scroll;
+    min-height: 200px;
+    overflow-y: hidden;
+    /* width: 600px; */
+  }
   .refer-top {
     flex-direction: column;
     gap: 24px;
@@ -389,7 +410,7 @@
     display: flex;
   }
   .refer-table {
-    /* overflow-x: auto; */
+    overflow-x: auto;
   }
   .ref-withdraw-btn {
     display: flex;
@@ -397,56 +418,69 @@
     justify-content: center;
     align-items: center;
     gap: 6px;
-    font-size:12px;
-    width:150px;
+    font-size: 12px;
+    width: 150px;
   }
-  .ref-bal-text :nth-child(1){
-    
-font-size: 14px;
- font-weight: 400;
-
+  .ref-bal-text :nth-child(1) {
+    font-size: 14px;
+    font-weight: 400;
   }
 }
-@media  screen and (max-width:480px) {
-    .refer-container{
-        padding: 24px 3%;
+@media screen and (max-width: 480px) {
+    .ref-tot-earn-icon-cont{
+        width: 40px;
+        height: 40px;
+        padding: 8px;
     }
-    .ref-left-one h1{
-        font-size: 20px;
+  .refer-refcode {
+    padding: 16px 10px;
+  }
+  .refer-refcode :nth-child(1){
+    font-size: 16px;
+  }
+    .refer-refcode :nth-child(2){
+        font-size: 16px;
     }
+    .share-icon-cont{
+        height: 40px;
+        width: 40px;
+        padding: 10px;
+    }
+  .refer-container {
+    padding: 24px 3%;
+  }
+  .ref-left-one h1 {
+    font-size: 20px;
+  }
 
-    
-    .ref-left-one p{
-        font-size: 14px;
-    }
-    .ref-left-two p{
-        font-size: 16px;
-    }
-    .ref-left-two p span{
-        font-size: 16px;
-    }
-    .ref-right-bottom h1{
-        font-size: 20px;
-    }
-    .ref-right-bottom h2{
-        font-size: 16px;
-    }
-    .ref-right-bottom p{
-        font-size: 12px;
-    }
-    .ref-tot-text :nth-child(1){
-        font-size: 12px;
-    }
-    .ref-tot-text :nth-child(2){
-        font-size: 16px;
-    }
-    .ref-bal-text :nth-child(1){
-        font-size: 16px;
-    }
-    .ref-bal-text :nth-child(2){
-        font-size: 20px;
-    }
-
+  .ref-left-one p {
+    font-size: 14px;
+  }
+  .ref-left-two p {
+    font-size: 16px;
+  }
+  .ref-left-two p span {
+    font-size: 16px;
+  }
+  .ref-right-bottom h1 {
+    font-size: 20px;
+  }
+  .ref-right-bottom h2 {
+    font-size: 16px;
+  }
+  .ref-right-bottom p {
+    font-size: 12px;
+  }
+  .ref-tot-text :nth-child(1) {
+    font-size: 12px;
+  }
+  .ref-tot-text :nth-child(2) {
+    font-size: 16px;
+  }
+  .ref-bal-text :nth-child(1) {
+    font-size: 16px;
+  }
+  .ref-bal-text :nth-child(2) {
+    font-size: 20px;
+  }
 }
-
-

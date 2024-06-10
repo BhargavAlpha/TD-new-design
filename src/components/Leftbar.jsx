@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Leftbar.css";
-import { useState, useEffect } from "react";
 import logo from "../assets/logo.svg";
 import closeIcon from "../assets/close.svg";
-const LeftBar = ({ setOpened, setPage, page, name, data, email }) => {
+
+const LeftBar = ({ setOpened, setPage, page, name, data }) => {
+    console.log("name in LeftBar:", name);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   useEffect(() => {
     const handleResize = () => {
@@ -31,8 +32,8 @@ const LeftBar = ({ setOpened, setPage, page, name, data, email }) => {
         {windowWidth < 1000 && (
           <div className="left-mob-cont">
             <div className="left-mob-name-cont">
-              <div className="left-mob-prefix-cont">{"B"}</div>
-              <div className="left-mob-name">{"Bhargav"}</div>
+              <div className="left-mob-prefix-cont">{name[0].toUpperCase()}</div>
+              <div className="left-mob-name">{name[0].toUpperCase()+name.slice(1)}</div>
             </div>
             <div className="left-mob-btn-cont">
               <button className="left-mob-res-btn">

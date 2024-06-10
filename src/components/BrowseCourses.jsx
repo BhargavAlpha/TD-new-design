@@ -5,29 +5,12 @@ import "./BrowseCourses.css";
 
 function BrowseCourses({ courses }) {
   const [selectedCategory, setSelectedCategory] = useState("all");
-  const scrollRef = useRef(null);
 
   const handleCategoryChange = (category) => {
     setSelectedCategory(category);
   };
  
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollContainer = scrollRef.current;
-      const scrollTop = scrollContainer.scrollLeft;
-      const scrollHeight = scrollContainer.scrollWidth - scrollContainer.clientWidth;
-      const scrolled = (scrollTop / scrollHeight) * 100;
-      document.getElementById("myBar").style.width = scrolled + "%";
-    };
-
-    const scrollContainer = scrollRef.current;
-    scrollContainer.addEventListener("scroll", handleScroll);
-
-    return () => {
-      scrollContainer.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   const categories = {
     technical: {
@@ -234,14 +217,12 @@ function BrowseCourses({ courses }) {
           </div>
         </ScrollContainer>
       </div>
-      <div className="cards-scroller2" ref={scrollRef}>
+      <div className="cards-scroller2" >
         {filteredCourses.map((course, index) => (
           <Card2 key={index} course={course} />
         ))}
       </div>
-      <div className="progress-container">
-        <div className="progress-bar" id="myBar"></div>
-      </div>
+     
     </div>
   );
 }

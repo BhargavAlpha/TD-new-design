@@ -250,4 +250,11 @@
           font-size: 14px;
       }
   }
-  
+  @media screen and (max-width:480px){
+    .certif-card-btn{
+        font-size: 12px;
+        padding:8px 6px;
+        
+
+    }
+  }

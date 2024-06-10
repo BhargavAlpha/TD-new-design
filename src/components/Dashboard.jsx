@@ -6,31 +6,13 @@ import { useEffect, useRef } from "react";
 
 import BrowseCourses from "./BrowseCourses.jsx";
 function Dashboard({ enrolledCourses, email, courses, certificates, certIds }) {
-  const [coursesScrollPercentage, setCoursesScrollPercentage] = useState(0);
-  const scrollRef = useRef(null);
+  
 
   const certificateMap = certificates?.reduce((acc, cert, index) => {
     acc[cert] = certIds[index];
     return acc;
   }, {});
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollContainer = scrollRef.current;
-      const scrollTop = scrollContainer.scrollLeft;
-      const scrollHeight =
-        scrollContainer.scrollWidth - scrollContainer.clientWidth;
-      const scrolled = (scrollTop / scrollHeight) * 100;
-      document.getElementById("myBar").style.width = scrolled + "%";
-    };
-
-    const scrollContainer = scrollRef.current;
-    scrollContainer.addEventListener("scroll", handleScroll);
-
-    return () => {
-      scrollContainer.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   return (
     <div className="dashboard">
@@ -66,7 +48,7 @@ function Dashboard({ enrolledCourses, email, courses, certificates, certIds }) {
       </div>
       <div className="dash-courses">
         <h1>My courses</h1>
-        <div className="cards-scroller" ref={scrollRef}>
+        <div className="cards-scroller" >
           {Object.keys(enrolledCourses)?.map((enrolledCourse) => {
             const certId =
               certificateMap && certificateMap[enrolledCourse]
@@ -84,9 +66,7 @@ function Dashboard({ enrolledCourses, email, courses, certificates, certIds }) {
             );
           })}
         </div>
-        <div className="progress-container">
-          <div className="progress-bar" id="myBar"></div>
-        </div>
+        
       </div>
       <BrowseCourses courses={courses} />
     </div>

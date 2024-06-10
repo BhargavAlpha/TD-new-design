@@ -254,6 +254,7 @@ function Refer({data}) {
             </div>
         </div>
       </div>
+      <div className="refer-table-cont">
       <div className="refer-table">
             <th>
                 <td>Name</td>
@@ -270,9 +271,10 @@ function Refer({data}) {
                         <td>{enroller.date_time}</td>
                         <td style={{color:"#6BB870"}}>₹{enroller.referralAmount}</td>
                     </tr>
+                    
                 )
             })}
-               
+      </div>
       </div>
     </div>
   );

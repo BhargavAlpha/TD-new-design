@@ -4,10 +4,14 @@
   align-items: flex-start;
   align-self: stretch;
   background-color: white;
+  height: fit-content;
   width: 355px;
   min-width: 355px;
   /* height: 300px; */
   border-radius: 16px;
+    border: 1px solid var(--Woodsmoke-700, #E5E5E8);
+
+   
 }
 .card2-top {
   display: flex;
@@ -91,3 +95,27 @@
   cursor: pointer;
   text-transform: capitalize;
 }
+@media screen and (max-width: 480px) {
+    .card2-container {
+      width:200px;
+        min-width: 200px;
+      min-height: 260px;
+      display: grid;
+        grid-template-rows: auto auto;
+    }
+    .card2-top span{
+        font-size: 14px;
+    }
+
+    
+    .card2-lec-dur-cont, .card2-access-ment-cont {
+        flex-direction: column;
+        align-items: flex-start;
+
+    }
+    .card2-lec, .card2-dur, .card2-access, .card2-ment {
+        width: 100%;
+    }
+  
+
+  }
