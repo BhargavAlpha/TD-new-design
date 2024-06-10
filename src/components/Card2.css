@@ -99,7 +99,7 @@
     .card2-container {
       width:200px;
         min-width: 200px;
-      min-height: 260px;
+      min-height: 270px;
       display: grid;
         grid-template-rows: auto auto;
     }

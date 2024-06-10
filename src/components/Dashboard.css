@@ -165,7 +165,7 @@
     }
     .dash-header {
         min-height: 274px;
-        width: 100vw;
+        /* width: 100vw; */
         display: flex;
         overflow-x: scroll; 
         scroll-snap-type: x mandatory; 
@@ -173,7 +173,8 @@
         overflow-y: hidden;
         padding-bottom: 24px;
         /* padding-left: 5px; */
-        padding-right: 20px;
+        /* padding-right: 24px; */
+        gap: 24px;
       }
       .dash-header-left,
       .dash-header-right {
@@ -181,7 +182,7 @@
         display: grid;
         grid-template-rows: auto auto;
         scroll-snap-align: start; 
-        min-width: calc(100vw - (4/100)*100vw);
+        min-width: calc(100vw - (6/100)*100vw);
       }
       .dash-header::-webkit-scrollbar {
         height: 6px;

@@ -178,6 +178,15 @@
 @media (max-width: 480px) {
     .card-container {
         width: 240px;
+        /* height: 300px; */
+        max-height: 300px;
+        max-width: 240px;
+    }
+    .card-content2{
+        padding: 6px 14px;
+    }
+    .load-card-img {
+        width: 240px;
         height: 300px;
     }
 
@@ -210,7 +219,10 @@
     .card-resume-btn,.card-cert-btn {
         padding: 10px 8px;
         font-size: 12px;
-        width:80px;
+        width:90px;
+    }
+    .card-content3-outer{
+        padding: 10px 8px;
     }
     .card-resume-btn span{
         font-size: 10px;
