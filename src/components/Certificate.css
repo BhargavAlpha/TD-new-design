@@ -4,9 +4,9 @@
     position: relative;
     overflow: scroll;
     display: flex;
-    gap:10px;
+    gap:2%;
     justify-content: space-between;
-    padding: 10px 10px 10px 10px;
+    padding: 10px 2%;
   }
   .certif-cont::-webkit-scrollbar {
     display: none;
@@ -27,7 +27,7 @@
     border: 1px solid var(--tutedude-color-neutral-2010, #ebedef);
     background: var(--White, #fff);
     display: flex;
-    width: 45%;
+    width: 49%;
     padding: 20px;
     flex-direction: column;
     align-items: center;
@@ -180,12 +180,17 @@
     color: #ffa239;
     background: #fff6ec;
   }
+  .certif-card-btn{
+    background: var(--Linear-Eminence, linear-gradient(180deg, #b73bbe 0%, #992e9d 93.51%));
+    color:white;
+    font-family: Poppins;
+  }
   
   .certif-right {
-    width: 50%;
+    width: 49%;
   }
   .certif-dummy-img-cont{
-      width: 95%;
+      width: 100%;
       /* padding: 20px; */
   }
   .certif-dummy-img-cont img{
@@ -193,7 +198,7 @@
   }
   
   .certif-faq-cont {
-    width: 95%;
+    width: 100%;
     border-radius: 30px;
     display: flex;
     padding: 20px;
@@ -226,12 +231,12 @@
   
   @media screen and (max-width:1000px) {
       .certif-cont{
-          width:calc(100vw - 20px);
+          width:calc(100vw);
       }
   }
   @media screen and (max-width:700px) {
       .certif-cont{
-          width:calc(100vw - 20px);
+          width:calc(100vw );
           flex-direction: column;
       }
       .certif-left{
@@ -254,6 +259,7 @@
     .certif-card-btn{
         font-size: 12px;
         padding:8px 6px;
+
         
 
     }
